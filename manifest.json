@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ClownFinder",
+  "version": "0.1",
+  "description": "Find clowns on the internet",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.reddit.com/r/CFB/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
