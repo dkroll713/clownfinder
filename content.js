@@ -3,7 +3,9 @@ const clownCheck = () => {
   for (let i = 0; i < comments.length; i++) {
     let comment = comments[i];
     let flair = comment.previousElementSibling;
-    if (!flair.classList.contains("flair") || !flair.classList.contains("customflair")) {
+    if (!flair || flair.classList.contains("flair") || flair.classList.contains("customflair")) {
+      // continue;
+    } else {
       let element = document.createElement("span");
       element.textContent = '🤡'
       element.classList.add("customflair");
